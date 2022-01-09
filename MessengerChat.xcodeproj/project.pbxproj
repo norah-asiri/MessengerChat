@@ -33,6 +33,14 @@
 		C32CE042278B79310081D422 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = C32CE041278B79310081D422 /* MessageKit */; };
 		C32CE045278B7C860081D422 /* JGProgressHUD-SwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C32CE044278B7C860081D422 /* JGProgressHUD-SwiftUI */; };
 		C32CE048278B7D2B0081D422 /* RxRealm in Frameworks */ = {isa = PBXBuildFile; productRef = C32CE047278B7D2B0081D422 /* RxRealm */; };
+		C35D9C5B278B90250080111A /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C35D9C5A278B90250080111A /* SDWebImageSwiftUI */; };
+		C35D9C5D278B93360080111A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35D9C5C278B93360080111A /* ChatViewController.swift */; };
+		C35D9C5F278B93E90080111A /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35D9C5E278B93E90080111A /* StorageManager.swift */; };
+		C35D9C61278B986C0080111A /* ConversationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35D9C60278B986C0080111A /* ConversationTableViewCell.swift */; };
+		C35D9C63278B98C10080111A /* PhotoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35D9C62278B98C10080111A /* PhotoViewerViewController.swift */; };
+		C35D9C65278B99E90080111A /* ConversationsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35D9C64278B99E90080111A /* ConversationsModels.swift */; };
+		C35D9C69278B9A5B0080111A /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35D9C68278B9A5B0080111A /* SearchResult.swift */; };
+		C35D9C6B278B9AB30080111A /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35D9C6A278B9AB30080111A /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +62,13 @@
 		C32CE032278B648D0081D422 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C32CE034278B648D0081D422 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C32CE035278B648D0081D422 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C35D9C5C278B93360080111A /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		C35D9C5E278B93E90080111A /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		C35D9C60278B986C0080111A /* ConversationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTableViewCell.swift; sourceTree = "<group>"; };
+		C35D9C62278B98C10080111A /* PhotoViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerViewController.swift; sourceTree = "<group>"; };
+		C35D9C64278B99E90080111A /* ConversationsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsModels.swift; sourceTree = "<group>"; };
+		C35D9C68278B9A5B0080111A /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		C35D9C6A278B9AB30080111A /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +84,7 @@
 				C32CE02C278B5D9E0081D422 /* FirebaseDatabase in Frameworks */,
 				C32CE02E278B5D9E0081D422 /* FirebaseStorage in Frameworks */,
 				C32CE03F278B6F750081D422 /* FacebookLogin in Frameworks */,
+				C35D9C5B278B90250080111A /* SDWebImageSwiftUI in Frameworks */,
 				C32CE028278B5D9E0081D422 /* FirebaseAuth in Frameworks */,
 				C32CE042278B79310081D422 /* MessageKit in Frameworks */,
 			);
@@ -111,9 +127,11 @@
 			isa = PBXGroup;
 			children = (
 				C32CE002278B46150081D422 /* NewConversationViewController.swift */,
+				C35D9C60278B986C0080111A /* ConversationTableViewCell.swift */,
 				C32CE003278B46150081D422 /* LogReg */,
 				C32CE006278B46150081D422 /* ProfileViewController.swift */,
 				C32CE007278B46150081D422 /* ConversationsViewController.swift */,
+				C35D9C5C278B93360080111A /* ChatViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -123,6 +141,7 @@
 			children = (
 				C32CE001278B46150081D422 /* LoginViewController.swift */,
 				C32CE005278B46150081D422 /* RegisterViewController.swift */,
+				C35D9C62278B98C10080111A /* PhotoViewerViewController.swift */,
 			);
 			path = LogReg;
 			sourceTree = "<group>";
@@ -149,6 +168,10 @@
 			isa = PBXGroup;
 			children = (
 				C32CE019278B463B0081D422 /* DatabaseManager.swift */,
+				C35D9C5E278B93E90080111A /* StorageManager.swift */,
+				C35D9C64278B99E90080111A /* ConversationsModels.swift */,
+				C35D9C68278B9A5B0080111A /* SearchResult.swift */,
+				C35D9C6A278B9AB30080111A /* ProfileViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -209,6 +232,7 @@
 				C32CE041278B79310081D422 /* MessageKit */,
 				C32CE044278B7C860081D422 /* JGProgressHUD-SwiftUI */,
 				C32CE047278B7D2B0081D422 /* RxRealm */,
+				C35D9C5A278B90250080111A /* SDWebImageSwiftUI */,
 			);
 			productName = MessengerChat;
 			productReference = C32CDFE9278B45AF0081D422 /* MessengerChat.app */;
@@ -244,6 +268,7 @@
 				C32CE040278B79300081D422 /* XCRemoteSwiftPackageReference "MessageKit" */,
 				C32CE043278B7C860081D422 /* XCRemoteSwiftPackageReference "JGProgressHUD-SwiftUI" */,
 				C32CE046278B7D2B0081D422 /* XCRemoteSwiftPackageReference "RxRealm" */,
+				C35D9C59278B90250080111A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = C32CDFEA278B45AF0081D422 /* Products */;
 			projectDirPath = "";
@@ -278,12 +303,19 @@
 			files = (
 				C32CE01A278B463B0081D422 /* DatabaseManager.swift in Sources */,
 				C32CE00B278B46150081D422 /* RegisterViewController.swift in Sources */,
+				C35D9C69278B9A5B0080111A /* SearchResult.swift in Sources */,
+				C35D9C5F278B93E90080111A /* StorageManager.swift in Sources */,
 				C32CDFED278B45AF0081D422 /* AppDelegate.swift in Sources */,
 				C32CE008278B46150081D422 /* LoginViewController.swift in Sources */,
 				C32CE009278B46150081D422 /* NewConversationViewController.swift in Sources */,
+				C35D9C65278B99E90080111A /* ConversationsModels.swift in Sources */,
+				C35D9C63278B98C10080111A /* PhotoViewerViewController.swift in Sources */,
 				C32CE00D278B46150081D422 /* ConversationsViewController.swift in Sources */,
 				C32CE00C278B46150081D422 /* ProfileViewController.swift in Sources */,
+				C35D9C61278B986C0080111A /* ConversationTableViewCell.swift in Sources */,
+				C35D9C6B278B9AB30080111A /* ProfileViewModel.swift in Sources */,
 				C32CE01F278B464A0081D422 /* Extensions.swift in Sources */,
+				C35D9C5D278B93360080111A /* ChatViewController.swift in Sources */,
 				C32CDFEF278B45AF0081D422 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -562,6 +594,14 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		C35D9C59278B90250080111A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -614,6 +654,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C32CE046278B7D2B0081D422 /* XCRemoteSwiftPackageReference "RxRealm" */;
 			productName = RxRealm;
+		};
+		C35D9C5A278B90250080111A /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C35D9C59278B90250080111A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
