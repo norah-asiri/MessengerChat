@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="U3x-wv-Lbd">
             <objects>
-                <viewController id="qLB-Qm-Gri" customClass="ViewController" customModule="MessengerAppIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qLB-Qm-Gri" customClass="ViewController" customModule="MessengerChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6XR-PD-S2V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -92,7 +92,6 @@
                             <constraint firstItem="m4v-hz-VEG" firstAttribute="top" secondItem="gr0-nH-G0h" secondAttribute="top" constant="50" id="KtB-wP-yhQ"/>
                             <constraint firstItem="GTt-kd-6JF" firstAttribute="top" secondItem="m4v-hz-VEG" secondAttribute="bottom" constant="15" id="O3u-rV-4go"/>
                             <constraint firstItem="GTt-kd-6JF" firstAttribute="leading" secondItem="gr0-nH-G0h" secondAttribute="leading" constant="20" id="QQ4-k1-eyv"/>
-                            <constraint firstItem="tl4-9P-CoD" firstAttribute="width" secondItem="NYi-Wl-Tee" secondAttribute="width" multiplier="0.163102" id="Qmb-jx-ghx"/>
                             <constraint firstItem="pVU-Ii-mnP" firstAttribute="leading" secondItem="gr0-nH-G0h" secondAttribute="leading" constant="20" id="R7M-ee-CY7"/>
                             <constraint firstItem="tl4-9P-CoD" firstAttribute="height" secondItem="NYi-Wl-Tee" secondAttribute="height" multiplier="0.685714" id="TQD-c2-HED"/>
                             <constraint firstItem="gr0-nH-G0h" firstAttribute="trailing" secondItem="NYi-Wl-Tee" secondAttribute="trailing" constant="20" id="U0w-vD-Fla"/>
@@ -131,7 +130,7 @@
         <!--Register View Controller-->
         <scene sceneID="kdk-bl-EAk">
             <objects>
-                <viewController id="1r5-fF-Cec" customClass="RegisterViewController" customModule="MessengerAppIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1r5-fF-Cec" customClass="RegisterViewController" customModule="MessengerChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hQo-Vn-5VM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -230,18 +229,30 @@
         <!--Chats-->
         <scene sceneID="goD-Pi-1ea">
             <objects>
-                <viewController id="4gl-49-3oW" sceneMemberID="viewController">
+                <viewController id="4gl-49-3oW" customClass="ConversationTab" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v5O-49-PVR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gYt-JE-v5g">
+                                <rect key="frame" x="0.0" y="59" width="414" height="739"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dKO-z7-o9z"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dKO-z7-o9z" firstAttribute="bottom" secondItem="gYt-JE-v5g" secondAttribute="bottom" constant="15" id="5Jt-0d-tWN"/>
+                            <constraint firstItem="gYt-JE-v5g" firstAttribute="trailing" secondItem="dKO-z7-o9z" secondAttribute="trailing" id="6Eb-lw-Afj"/>
+                            <constraint firstItem="gYt-JE-v5g" firstAttribute="top" secondItem="dKO-z7-o9z" secondAttribute="top" constant="15" id="Ljv-9z-ASh"/>
+                            <constraint firstItem="gYt-JE-v5g" firstAttribute="leading" secondItem="dKO-z7-o9z" secondAttribute="leading" id="Y9s-fB-9qk"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Chats" image="message.fill" catalog="system" id="P0i-29-HlT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FTX-IU-OPg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4316" y="755"/>
+            <point key="canvasLocation" x="4315.9420289855079" y="754.6875"/>
         </scene>
         <!--Profile-->
         <scene sceneID="5vW-jt-ttz">

@@ -95,7 +95,7 @@ class ChatViewController: MessagesViewController {
             return nil
         }
         
-        let safeEmail = DatabaseManger.safeEmail(emailAddress: email)
+        let safeEmail = DatabaseManager.safeEmail(emailAddress: email)
         
         return Sender(photoURL: "", senderId: safeEmail, displayName: "Me")
     }
@@ -116,7 +116,7 @@ class ChatViewController: MessagesViewController {
     }
     
     private func listenForMessages(id: String, shouldScrollToBottom: Bool) {
-        DatabaseManger.shared.getAllMessagesForConversation(with: id) { [weak self] result in
+        DatabaseManager.shared.getAllMessagesForConversation(with: id) { [weak self] result in
             switch result {
             case .success(let messages):
                 print("success in getting messages: \(messages)")
@@ -166,7 +166,7 @@ extension ChatViewController: InputBarAccessoryViewDelegate {
             // create convo in database
             // message ID should be a unique ID for the given message, unique for all the message
             // use random string or random number
-            DatabaseManger.shared.createNewConversation(with: otherUserEmail, name: self.title ?? "User", firstMessage: message) { [weak self] success in
+            DatabaseManager.shared.createNewConversation(with: otherUserEmail, name: self.title ?? "User", firstMessage: message) { [weak self] success in
                 if success {
                     print("message sent")
                     self?.isNewConversation = false
@@ -181,7 +181,7 @@ extension ChatViewController: InputBarAccessoryViewDelegate {
             }
             
             // append to existing conversation data
-            DatabaseManger.shared.sendMessage(to: conversationId, name: name, newMessage: message) { success in
+            DatabaseManager.shared.sendMessage(to: conversationId, otherUserEmail: "" , name: name, newMessage: message) { success in
                 if success {
                     print("message sent")
                 }else {
@@ -200,7 +200,7 @@ extension ChatViewController: InputBarAccessoryViewDelegate {
             return nil
         }
         
-        let safeCurrentEmail = DatabaseManger.safeEmail(emailAddress: currentUserEmail)
+        let safeCurrentEmail = DatabaseManager.safeEmail(emailAddress: currentUserEmail)
         
         let dateString = Self.dateFormatter.string(from: Date())
         let newIdentifier = "\(otherUserEmail)_\(safeCurrentEmail)_\(dateString)"
