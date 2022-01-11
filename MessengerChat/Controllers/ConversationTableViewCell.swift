@@ -8,6 +8,7 @@ import UIKit
 import SDWebImage
 
 class ConversationTableViewCell: UITableViewCell {
+    
 
     static let identifier = "ConversationTableViewCell"
 

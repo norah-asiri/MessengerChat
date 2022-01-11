@@ -12,6 +12,7 @@ class NewConversationCell: UITableViewCell {
 
     static let identifier = "NewConversationCell"
 
+    
     private let userImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
